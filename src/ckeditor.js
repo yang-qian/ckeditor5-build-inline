@@ -20,51 +20,60 @@ import ImageuploadPlugin from '@ckeditor/ckeditor5-image/src/imageupload';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
 import ListPlugin from '@ckeditor/ckeditor5-list/src/list';
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import HighlightPlugin from '@ckeditor/ckeditor5-highlight/src/highlight';
+import HighlightcommandPlugin from '@ckeditor/ckeditor5-highlight/src/highlightcommand';
+import HighlighteditingPlugin from '@ckeditor/ckeditor5-highlight/src/highlightediting';
+import HighlightuiPlugin from '@ckeditor/ckeditor5-highlight/src/highlightui';
 
 export default class InlineEditor extends InlineEditorBase {}
 
-InlineEditor.builtinPlugins = [
-	EssentialsPlugin,
-	UploadadapterPlugin,
-	AutoformatPlugin,
-	BoldPlugin,
-	ItalicPlugin,
-	BlockquotePlugin,
-	EasyimagePlugin,
-	HeadingPlugin,
-	ImagePlugin,
-	ImagecaptionPlugin,
-	ImagestylePlugin,
-	ImagetoolbarPlugin,
-	ImageuploadPlugin,
-	LinkPlugin,
-	ListPlugin,
-	ParagraphPlugin
-];
-
-InlineEditor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'imageUpload',
-			'blockQuote',
-			'undo',
-			'redo'
-		]
-	},
-	image: {
-		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
-		]
-	},
-	language: 'en'
+InlineEditor.build = {
+	plugins: [
+		EssentialsPlugin,
+		UploadadapterPlugin,
+		AutoformatPlugin,
+		BoldPlugin,
+		ItalicPlugin,
+		BlockquotePlugin,
+		EasyimagePlugin,
+		HeadingPlugin,
+		ImagePlugin,
+		ImagecaptionPlugin,
+		ImagestylePlugin,
+		ImagetoolbarPlugin,
+		ImageuploadPlugin,
+		LinkPlugin,
+		ListPlugin,
+		ParagraphPlugin,
+		HighlightPlugin,
+		HighlightcommandPlugin,
+		HighlighteditingPlugin,
+		HighlightuiPlugin
+	],
+	config: {
+		toolbar: {
+			items: [
+				'heading',
+				'|',
+				'bold',
+				'italic',
+				'link',
+				'bulletedList',
+				'numberedList',
+				'imageUpload',
+				'blockQuote',
+				'undo',
+				'redo'
+			]
+		},
+		image: {
+			toolbar: [
+				'imageStyle:full',
+				'imageStyle:side',
+				'|',
+				'imageTextAlternative'
+			]
+		},
+		language: 'en'
+	}
 };
