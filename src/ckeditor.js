@@ -63,7 +63,8 @@ InlineEditor.build = {
 				'imageUpload',
 				'blockQuote',
 				'undo',
-				'redo'
+				'redo',
+				'highlight'
 			]
 		},
 		image: {
@@ -71,7 +72,8 @@ InlineEditor.build = {
 				'imageStyle:full',
 				'imageStyle:side',
 				'|',
-				'imageTextAlternative'
+				'imageTextAlternative',
+				'highlight'
 			]
 		},
 		language: 'en'
